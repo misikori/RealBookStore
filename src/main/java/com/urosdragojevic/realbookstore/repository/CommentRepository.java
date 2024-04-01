@@ -34,10 +34,22 @@ public class CommentRepository {
 
              statement.execute();
 
-             // comment'); insert into persons(firstName, lastName, email) values ('jaosn', 'todd', 'robin@mail.com')--
+             // comment'); insert into persons(firstName, lastName, email) values ('jason', 'todd', 'robin@mail.com')--
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+//        String query = "insert into comments(bookId, userId, comment) values (" + comment.getBookId() + ", " + comment.getUserId() + ", '" + comment.getComment() + "')";
+//
+//        try (Connection connection = dataSource.getConnection();
+//             Statement statement = connection.createStatement();
+//        ) {
+//            statement.execute(query);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
+        // comment'); insert into persons(firstName, lastName, email) values ('jason', 'todd', '<img src="x" onerror="alert(document.cookie)"/>')--
     }
 
     public List<Comment> getAll(int bookId) {
