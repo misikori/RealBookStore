@@ -69,7 +69,7 @@ public class PersonsController {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         var current_user = (User) auth.getPrincipal();
-        if(Integer.valueOf(person.getId()) != current_user.getId())
+        if(Integer.parseInt(person.getId()) != current_user.getId())
             throw new AccessDeniedException("Forbidden");
 
         personRepository.update(person);
